@@ -45,7 +45,7 @@ config.color_scheme = 'Yoru'
 --window settings
 config.font_size = 13
 config.font = wezterm.font 'JetBrains Mono'
-config.use_resize_increments = true
+-- config.use_resize_increments = true
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.use_fancy_tab_bar = false
