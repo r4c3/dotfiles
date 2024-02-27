@@ -12,7 +12,7 @@ symlink_files() {
     for item in $source_dir/{.,}*(D); do
         item_name=$(basename "$item")
 
-        if [[ "$item_name" == ".git" || "$item_name" == "setup.sh" ]]; then
+        if [[ "$item_name" == ".git" || "$item_name" == "setup.sh" || "$item_name" == "manual" ]]; then
             continue
         fi
 
