@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 vim.opt.number = true -- Make line numbers default
@@ -93,6 +96,42 @@ require("lazy").setup({
 				changedelete = { text = "~" },
 			},
 		},
+	},
+
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+			"3rd/image.nvim",
+		},
+		config = function()
+			require("neo-tree").setup({
+				update_focused_file = {
+					enable = true,
+					update_cwd = true,
+				},
+				window = {
+					position = "current",
+				},
+				vim.keymap.set(
+					"n",
+					"<leader>e",
+					"<Cmd>Neotree toggle position=current<CR>",
+					{ desc = "Toggle [E]xplorer" }
+				),
+			})
+		end,
+	},
+
+	{ -- autoclose brackets and symbols
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup()
+		end,
 	},
 
 	{ -- Useful plugin to show you pending keybinds.
