@@ -21,7 +21,7 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true -- Configure how new splits should be opened
 vim.opt.splitbelow = true
 vim.opt.list = true -- Sets how neovim will display certain whitespace in the editor.
-vim.opt.listchars = { trail = "·", nbsp = "␣" }
+vim.opt.listchars = { trail = "·", nbsp = "␣", tab = "» " }
 vim.opt.inccommand = "split" -- Preview substitutions live, as you type!
 vim.opt.cursorline = true -- Show which line your cursor is on
 vim.opt.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
