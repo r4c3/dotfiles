@@ -8,7 +8,7 @@ end
 
 config.color_scheme = "Oxocarbon Dark"
 
-config.font_size = 16
+config.font_size = 13
 config.font = wezterm.font("JetBrains Mono")
 config.window_decorations = "NONE"
 config.window_close_confirmation = "NeverPrompt"
