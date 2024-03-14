@@ -25,6 +25,10 @@ vim.opt.listchars = { trail = "·", nbsp = "␣", tab = "» " }
 vim.opt.inccommand = "split" -- Preview substitutions live, as you type!
 vim.opt.cursorline = true -- Show which line your cursor is on
 vim.opt.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.expandtab = true -- Use spaces instead of tabs
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 
 -- [[ Basic Keymaps ]]
 -- See `:help vim.keymap.set()`
@@ -81,6 +85,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
+
 	-- "gc" to comment visual regions/lines
 	{ "numToStr/Comment.nvim", opts = {} },
 
