@@ -118,6 +118,13 @@ require("lazy").setup({
 					enable = true,
 					update_cwd = true,
 				},
+				filesystem = {
+					filtered_items = {
+						always_show = {
+							"lib",
+						},
+					},
+				},
 				window = {
 					position = "current",
 				},
